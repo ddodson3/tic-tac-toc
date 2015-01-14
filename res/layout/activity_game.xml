@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin" >
+	    <ImageView android:id="@+id/player_a_picture"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="@integer/image_weight"
+	            android:layout_margin="@dimen/normal_margin"
+	            android:src="@drawable/smile"
+	            android:layout_gravity="left" />
+	    <TextView android:id="@+id/current_player"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/text_weight"
+            android:layout_margin="@dimen/normal_margin" 
+            android:text="@string/default_user_name"
+            android:textSize="@dimen/text_size"
+            android:gravity="center" 
+            android:layout_gravity="center"/>
+	    <ImageView android:id="@+id/player_b_picture"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="@integer/image_weight"
+	            android:layout_margin="@dimen/normal_margin"
+	            android:src="@drawable/smile"
+	            android:layout_gravity="right" />	    
+    </LinearLayout>
+    
+    <ProgressBar android:id="@+id/timer"
+	        style="@android:style/Widget.ProgressBar.Horizontal"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="@dimen/normal_margin"
+	        android:max="@integer/timer_max_default" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
+		<TableLayout
+		        android:id="@+id/board"
+		        android:layout_width="@dimen/board_size"
+		        android:layout_height="@dimen/board_size" >
+		        <TableRow
+		            android:tag="0"
+		            android:layout_width="match_parent"
+		            android:layout_height="0dp"
+		            android:layout_weight="1" >
+		            <include android:id="@+id/one"
+		                layout="@layout/square_layout"
+		                android:layout_width="0dip"
+		                android:layout_height="match_parent"
+		                android:layout_weight="1" />
+		            <include  android:id="@+id/two"
+		                layout="@layout/square_layout"
+		                android:layout_width="0dip"
+		                android:layout_height="match_parent"
+		                android:layout_weight="1" />
+		            <include  android:id="@+id/three"
+		                layout="@layout/square_layout"
+		                android:layout_width="0dip"
+		                android:layout_height="match_parent"
+		                android:layout_weight="1" />
+		        </TableRow>
+		        <TableRow
+		            android:tag="1"
+		            android:layout_width="match_parent"
+		            android:layout_height="0dp"
+		            android:layout_weight="1" >
+		            <include android:id="@+id/one"
+		                layout="@layout/square_layout"
+		                android:layout_width="0dip"
+		                android:layout_height="match_parent"
+		                android:layout_weight="1" />
+		            <include  android:id="@+id/two"
+		                layout="@layout/square_layout"
+		                android:layout_width="0dip"
+		                android:layout_height="match_parent"
+		                android:layout_weight="1" />
+		            <include  android:id="@+id/three"
+		                layout="@layout/square_layout"
+		                android:layout_width="0dip"
+		                android:layout_height="match_parent"
+		                android:layout_weight="1" />
+		        </TableRow>
+		        <TableRow
+		            android:tag="2"
+		            android:layout_width="match_parent"
+		            android:layout_height="0dp"
+		            android:layout_weight="1" >
+		            <include android:id="@+id/one"
+		                layout="@layout/square_layout"
+		                android:layout_width="0dip"
+		                android:layout_height="match_parent"
+		                android:layout_weight="1" />
+		            <include  android:id="@+id/two"
+		                layout="@layout/square_layout"
+		                android:layout_width="0dip"
+		                android:layout_height="match_parent"
+		                android:layout_weight="1" />
+		            <include  android:id="@+id/three"
+		                layout="@layout/square_layout"
+		                android:layout_width="0dip"
+		                android:layout_height="match_parent"
+		                android:layout_weight="1" />
+		        </TableRow>
+		        
+				
+		    </TableLayout>
+			        
+	</LinearLayout>
+</LinearLayout>

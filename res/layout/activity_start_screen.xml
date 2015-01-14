@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView android:id="@+id/player_a_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/text_weight"
+            android:layout_margin="@dimen/normal_margin" 
+            android:text="@string/default_user_name"
+            android:textSize="@dimen/text_size" />
+        <ImageView android:id="@+id/player_a_picture"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="@integer/image_weight"
+            android:layout_margin="@dimen/normal_margin"
+            android:src="@drawable/smile" />
+    </LinearLayout>
+    
+    <RatingBar android:id="@+id/player_a_score"
+        android:numStars="@integer/max_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
+        android:isIndicator="true" />
+    
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView android:id="@+id/player_b_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/text_weight"
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/default_user_name"
+            android:textSize="@dimen/text_size" />
+        <ImageView android:id="@+id/player_b_picture"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="@integer/image_weight"
+            android:layout_margin="@dimen/normal_margin"
+            android:src="@drawable/smile" />
+	</LinearLayout>
+	
+    <RatingBar android:id="@+id/player_b_score"
+        android:numStars="@integer/max_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
+        android:isIndicator="true" />
+    
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center" >
+	    <Button android:id="@+id/start_game"
+	        android:layout_width="@dimen/start_width"
+	        android:layout_height="@dimen/start_height"
+	        android:text="@string/start"
+	        android:onClick="startGame" />
+	</LinearLayout>
+    
+</LinearLayout>

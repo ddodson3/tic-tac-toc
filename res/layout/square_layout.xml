@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ >
+
+    <Button android:id="@+id/button"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:onClick="playClickHandler" />
+	<ImageView android:id="@+id/player_image"
+	    android:layout_width="@dimen/square_size"
+	    android:layout_height="@dimen/square_size"
+	    android:scaleType="fitCenter"
+	    android:visibility="invisible"
+	    android:src="@drawable/smile" />    
+</FrameLayout>
